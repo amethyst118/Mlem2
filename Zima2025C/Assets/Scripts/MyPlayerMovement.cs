@@ -35,7 +35,7 @@ public class MyPlayerMovement : MonoBehaviour
 
         var move = Input.GetAxis("Vertical") * transform.forward + Input.GetAxis("Horizontal") * transform.right;
 
-        //MovementSpeed = Input.GetButton("Run") ? runSpeed : walkSpeed;
+        MovementSpeed = Input.GetButton("Run") ? runSpeed : walkSpeed;
 
         MoveDirection = MovementSpeed * Vector3.ClampMagnitude(move, 1f);
 
@@ -46,6 +46,7 @@ public class MyPlayerMovement : MonoBehaviour
             {
                 yVeclocity = JumpSpeed;
                 jumpDelay = 0;
+                animator.SetTrigger("Jumping");
             }
         }
 

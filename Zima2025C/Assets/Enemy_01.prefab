@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 8468124782581979920}
   - component: {fileID: 5303326749158827763}
   - component: {fileID: 5815075279141568181}
-  - component: {fileID: 2587015476943077807}
+  - component: {fileID: 7252744538919797190}
+  - component: {fileID: 5077158006568400556}
   m_Layer: 0
   m_Name: Enemy_01
   m_TagString: Enemy
@@ -103,7 +104,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.6703385
-  m_Speed: 3.5
+  m_Speed: 2
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -129,8 +130,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyController
   navMeshAgent: {fileID: 0}
   playerTransform: {fileID: 0}
---- !u!135 &2587015476943077807
-SphereCollider:
+--- !u!114 &7252744538919797190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6616165750064466289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a15a4f9939843d46bc9d789e3e03a56, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
+  deathParticlePrefRef: {fileID: 4397334591890123670, guid: b0159ffb3464ec5478e3f6e6ce51d561, type: 3}
+  coinPrefRef: {fileID: 3049428253405200621, guid: e62e775cb5c996a4c944ff20f3cec481, type: 3}
+  hp: 100
+  dead: 0
+--- !u!136 &5077158006568400556
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -144,9 +161,11 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 1.0611403
+  serializedVersion: 2
+  m_Radius: 0.591751
+  m_Height: 2.1222806
+  m_Direction: 1
   m_Center: {x: -0.0019368529, y: 1.0611403, z: 0.07858753}

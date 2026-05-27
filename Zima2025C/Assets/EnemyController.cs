@@ -22,7 +22,7 @@ public class EnemyController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene("Demo");
+            other.GetComponent<MyPlayerHealth>().TakeDamage(0.5f);
         } 
     }
 }
