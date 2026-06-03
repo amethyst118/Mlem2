@@ -18,6 +18,8 @@ public class MyPlayerHealth : MonoBehaviour
     //public MyPlayerShooting playerShooting;
     public CharacterController cc;
 
+    public Animator animator;
+    public MyPlayerShooting playerShooting;
     //public Slider healthBar;
     //public Image healthBarFillImage;
     //public Gradient colorGradient;
@@ -41,6 +43,7 @@ public class MyPlayerHealth : MonoBehaviour
         if (HP <= 0)
         {
             dead = true;
+            animator.SetBool("Dead", true);
             Camera.main.GetComponent<MyCameraMovement>().DetachCamera();
             Instantiate(deathPrefab, transform.position, transform.rotation);
             onDeath?.Invoke();
