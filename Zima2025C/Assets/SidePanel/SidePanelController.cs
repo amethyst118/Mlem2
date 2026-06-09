@@ -22,7 +22,8 @@ public class SidePanelController : MonoBehaviour
 
     public void OnSidePanelButtonClickA()
     {
-        if (currentSidePanelState == SidePanelState.MaximizedA){
+        if (currentSidePanelState == SidePanelState.MaximizedA)
+        {
             animatorRef.SetBool("IsMaximizedA", false);
             currentSidePanelState = SidePanelState.Minimized;
         }
@@ -45,6 +46,7 @@ public class SidePanelController : MonoBehaviour
         }
     
     }
+
     public void OnSidePanelButtonClickB()
     {
        if (currentSidePanelState == SidePanelState.MaximizedB){
