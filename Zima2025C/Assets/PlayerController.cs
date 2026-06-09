@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     public float speedBoostTimer;
 
     public Action OnHPChanged;
+    public Action OnSpeedChanged;
 
     private void Start()
     {
@@ -41,10 +42,11 @@ public class PlayerController : MonoBehaviour
         speed = baseSpeed;
         rb.maxAngularVelocity = 10;
         speedBoostTimer -= Time.deltaTime;
-        if (speedBoostTimer < 0)
+        if (speedBoostTimer > 0)
         {
             speed *= 3;
             rb.maxAngularVelocity = 15;
+            OnSpeedChanged?.Invoke();
         }
 
         rb.AddTorque(speed * Time.deltaTime * Input.GetAxis("Vertical") * cameraTransform.right);

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4691530429831713928}
   - component: {fileID: 699512943876894293}
   - component: {fileID: 7766063469063797296}
-  - component: {fileID: 3796215121936846538}
   m_Layer: 5
   m_Name: Minimap
   m_TagString: Untagged
@@ -91,23 +90,3 @@ MonoBehaviour:
   currentCameraViewSize: 0
   minSize: 5
   maxSize: 10
---- !u!114 &3796215121936846538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6346579564800252283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34be2dd8df8f703469402a46ad01361c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BallMinimapController
-  animatorRef: {fileID: 0}
-  renderTextureRef: {fileID: 8400000, guid: 8430fd664ea0d71458a1dc1f0e99eb65, type: 2}
-  mainCameraTransform: {fileID: 0}
-  playerTransform: {fileID: 0}
-  currentCameraViewSize: 0
-  minSize: 5
-  maxSize: 10
-  offset: {x: 0, y: 10, z: 0}
