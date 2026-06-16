@@ -22,7 +22,7 @@ public class EnemyController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            other.GetComponent<MyPlayerHealth>().TakeDamage(1,5f);
+            other.GetComponent<MyPlayerHealth>().TakeDamage(1f);
         } 
     }
 }
